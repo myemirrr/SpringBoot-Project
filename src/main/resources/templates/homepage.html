@@ -50,15 +50,30 @@
             <img src="/1.jpeg" alt="Resim" class="img-fluid">
 
         </div>
-        <div class="col-md-6">
-            <!-- Bilgilendirme alanı -->
-            <h2 style="text-align: center;">Hoş Geldiniz!</h2>
-
-            <p>Öğrenci Yönetim Sistemine hoş geldiniz. Bu sistem, öğrencilerinizi kolayca takip etmenizi sağlar.</p>
-            <p>Burada öğrencilerinizin bilgilerini görüntüleyebilir, düzenleyebilir ve yeni öğrenciler ekleyebilirsiniz.</p>
-            <p>Ayrıca sistemdeki öğretmenlerin ve okulun haberlerini takip edebilirsiniz.</p>
-            <p>Daha fazla bilgi ve işlem için menüdeki diğer sekmelere göz atabilirsiniz.</p>
+        <div style="overflow: hidden;">
+            <div style="white-space: nowrap;">
+                <p style="display: inline-block; animation: marquee 15s linear infinite;">
+                    Öğrenci Yönetim Sistemine hoş geldiniz. Bu sistem, öğrencilerinizi kolayca takip etmenizi sağlar.
+                </p>
+                <p style="display: inline-block; animation: marquee 15s linear infinite;">
+                    Burada öğrencilerinizin bilgilerini görüntüleyebilir, düzenleyebilir ve yeni öğrenciler ekleyebilirsiniz.
+                </p>
+                <p style="display: inline-block; animation: marquee 15s linear infinite;">
+                    Ayrıca sistemdeki öğretmenlerin ve okulun haberlerini takip edebilirsiniz.
+                </p>
+                <p style="display: inline-block; animation: marquee 15s linear infinite;">
+                    Daha fazla bilgi ve işlem için menüdeki diğer sekmelere göz atabilirsiniz.
+                </p>
+            </div>
         </div>
+
+        <style>
+            @keyframes marquee {
+                0% { transform: translateX(100%); }
+                100% { transform: translateX(-100%); }
+            }
+        </style>
+
 
     </div>
 </div>
