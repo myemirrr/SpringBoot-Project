@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Öğrenci Yönetim Sistemi - Ana Sayfa</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <style>
+        /* Özel CSS stilleri buraya eklenebilir */
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Öğrenci Yönetim Sistemi</a>
+
+    <!-- Toggler/collapsible Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/homepage}">Ana Sayfa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/students}">Öğrenci Yönetim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/teachers}">Öğretmen Yönetim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/news}">Haberler</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/comunication}">İletişim</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Resim alanı -->
+            <img src="/1.jpeg" alt="Resim" class="img-fluid">
+
+        </div>
+        <div class="col-md-6">
+            <!-- Bilgilendirme alanı -->
+            <h2 style="text-align: center;">Hoş Geldiniz!</h2>
+
+            <p>Öğrenci Yönetim Sistemine hoş geldiniz. Bu sistem, öğrencilerinizi kolayca takip etmenizi sağlar.</p>
+            <p>Burada öğrencilerinizin bilgilerini görüntüleyebilir, düzenleyebilir ve yeni öğrenciler ekleyebilirsiniz.</p>
+            <p>Ayrıca sistemdeki öğretmenlerin ve okulun haberlerini takip edebilirsiniz.</p>
+            <p>Daha fazla bilgi ve işlem için menüdeki diğer sekmelere göz atabilirsiniz.</p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
