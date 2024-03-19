@@ -2,28 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Öğrenci Yönetim Sistemi - Ana Sayfa</title>
+    <title>Öğrenci Yönetim Sistemi - İletişim</title>
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
     <style>
         /* Özel CSS stilleri buraya eklenebilir */
-        .mb-4 img,
-        .mb-4 {
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        .mb-4 img {
-            height: auto;
-        }
-
-        /* Sağ taraftaki resimlerin boyutunu ayarla */
-        .col-md-6 > div > img {
-            width: 100%;
-            height: 285px;
-        }
     </style>
 </head>
 <body>
@@ -59,49 +44,35 @@
 </nav>
 
 <div class="container mt-4">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-6">
-            <!-- Resim alanı -->
-            <img src="/1.jpeg" alt="Resim" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-            <!-- İkinci Resim alanı -->
-            <div class="mb-4">
-                <img src="/indir.png" alt="Resim" class="img-fluid">
+            <h2 class="text-center mb-4">İletişim Formu</h2>
+            <div class="text-center mb-4">
+                <img src="/sdu.png" alt="Resim" class="img-fluid" style="max-width: 200px;">
             </div>
-            <!-- Üçüncü Resim alanı -->
-            <div>
-                <img src="/2.png" alt="Resim" class="img-fluid" height="1000">
-            </div>
+            <form action="/submit_contact_form" method="post">
+                <div class="form-group">
+                    <label for="fullName">Ad Soyad:</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta Adresi:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız:</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+            </form>
         </div>
-
-        <div style="overflow: hidden;">
-            <div style="white-space: nowrap;">
-                <p style="display: inline-block; animation: marquee 15s linear infinite;">
-                    Öğrenci Yönetim Sistemine hoş geldiniz. Bu sistem, öğrencilerinizi kolayca takip etmenizi sağlar.
-                </p>
-                <p style="display: inline-block; animation: marquee 15s linear infinite;">
-                    Burada öğrencilerinizin bilgilerini görüntüleyebilir, düzenleyebilir ve yeni öğrenciler ekleyebilirsiniz.
-                </p>
-
-        </div>
-
-
-        <style>
-            @keyframes marquee {
-                0% { transform: translateX(100%); }
-                100% { transform: translateX(-100%); }
-            }
-        </style>
-
-
     </div>
 </div>
 
+</body>
 <footer class="bg-dark text-white text-center py-4 mt-5">
     <div class="container">
         <span>Öğrenci Yönetim Sistemi &copy; Mustafa Yasin Emir-Ömer Soydinç</span>
     </div>
 </footer>
-</body>
 </html>
