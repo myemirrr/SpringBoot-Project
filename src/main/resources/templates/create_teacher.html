@@ -22,7 +22,7 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/students}">Öğrenci Yönetim</a>
+                <a class="nav-link" th:href="@{/teachers}">Öğrenci Yönetim</a>
             </li>
         </ul>
     </div>
@@ -35,7 +35,7 @@
             <div class="card">
                 <h1 class="card-header text-center">Yeni Öğretmen Ekle</h1>
                 <div class="card-body">
-                    <form th:action="@{/students}" th:object="${student}" method="POST">
+                    <form th:action="@{/teachers}" th:object="${teacher}" method="POST">
                         <div class="form-group">
                             <label>Öğretmen İsim</label>
                             <input type="text" name="firstName" th:field="*{firstName}" class="form-control" placeholder="Öğretmen İsmini Giriniz"/>
